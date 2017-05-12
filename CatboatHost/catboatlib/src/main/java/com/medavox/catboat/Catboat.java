@@ -1,5 +1,7 @@
 package com.medavox.catboat;
 
+import com.medavox.catboat.common.Message;
+
 import java.io.InputStreamReader;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -22,6 +24,7 @@ public class Catboat implements Observer<String> {
         Observable<String> userInput =
                 StringObservable.from(new InputStreamReader(System.in));
         Observable<String> lined = StringObservable.byLine(userInput);
+        //Observable<Message> nump = lined.dematerialize()
 
         lined.subscribe(this);
     }

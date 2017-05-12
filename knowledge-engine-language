@@ -1,0 +1,33 @@
+thing bob {
+    isA Person {Name: bob jones};
+    isA Male;
+    isA Human;
+}
+
+------
+
+thing Person {
+    isA Category;
+    has Name;
+    can Speak;
+    can Live;
+}
+
+relationship have {
+    infinitive: have
+    forms {
+        1p
+    }
+}
+
+relationship Live {
+    infinitive: live
+
+    forms {//only exceptions to the standard conjunction rules need to be declared here
+
+    }
+
+}
+
+declare relationship isA
+    rightside must ( isA Category )

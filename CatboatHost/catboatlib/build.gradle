@@ -4,6 +4,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'io.reactivex:rxjava:1.2.9'
     compile 'io.reactivex:rxjava-string:1.1.1'
+    compile 'com.github.medavox:utils:v0.4'
 }
 
 sourceCompatibility = "1.7"
